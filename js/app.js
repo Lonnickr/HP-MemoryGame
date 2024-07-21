@@ -14,11 +14,17 @@ let interval;
 let firstCard = false;
 let seconDcard = false;
 
-const items = [
-    { name: "fawkes1", image: "fawkes1.jpeg"},
-    { name: "fawkes2", image: "fawkes2.jpeg"},
-    { name: "gryffindor", image: "gryffindor.jpeg"},
-    { name: "hufflepuff", image: "hufflepuff.jpeg"},
-    { name: "ravenclaw", image: "ravenclaw.jpeg"},
-    { name: "slytherin", image: "slytherin.jpeg"}
+const getItems = () => [
+    { name: "fawkes1", image: "fawkes1.jpeg" },
+    { name: "fawkes2", image: "fawkes2.jpeg" },
+    { name: "gryffindor", image: "gryffindor.jpeg" },
+    { name: "hufflepuff", image: "hufflepuff.jpeg" },
+    { name: "ravenclaw", image: "ravenclaw.jpeg" },
+    { name: "slytherin", image: "slytherin.jpeg" }
 ]
+
+const randomize = () => {
+    const items = getItems ();
+    console.log(items);
+}
+randomize ();
