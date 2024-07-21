@@ -14,7 +14,7 @@ let interval;
 let firstCard = false;
 let seconDcard = false;
 
-const getItems = () => [
+const getData = () => [
     { name: "fawkes1", image: "../images/fawkes\ 1.jpeg"},
     { name: "fawkes2", image: "../images/fawkes\ 2.jpeg" },
     { name: "gryffindor", image: "../images/gryffindor.jpeg" },
@@ -30,21 +30,22 @@ const getItems = () => [
 ]
 
 const randomize = () => {
-    const items = getItems ();
-    items.sort(() => Math.random() - 0.5);
-    return items; 
+    const cardData = getData ();
+    cardData.sort(() => Math.random() - 0.5);
+    return cardData; 
 }
 
 const cardGenerator = () => {
-    const items = randomize();
-    items.forEach((items)=> {
+    const cardData = randomize();
+cardData.forEach( item => {
+        console.log(item);
     const card = document.createElement("div");
     const face = document.createElement("img");
     const back = document.createElement("img");
     card.classList = "card";
     face.classList = "face";
     back.classList = "back";
-face.src = items.image;
+face.src = item.image;
 
     section.appendChild(card);
     card.appendChild(face);
