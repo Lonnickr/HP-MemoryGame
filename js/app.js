@@ -20,6 +20,12 @@ const getItems = () => [
     { name: "gryffindor", image: "../images/gryffindor.jpeg" },
     { name: "hufflepuff", image: "../images/hufflepuff.jpeg" },
     { name: "ravenclaw", image: "../images/ravenclaw.jpeg" },
+    { name: "slytherin", image: "../images/slytherin.jpeg" },
+    { name: "fawkes1", image: "../images/fawkes\ 1.jpeg"},
+    { name: "fawkes2", image: "../images/fawkes\ 2.jpeg" },
+    { name: "gryffindor", image: "../images/gryffindor.jpeg" },
+    { name: "hufflepuff", image: "../images/hufflepuff.jpeg" },
+    { name: "ravenclaw", image: "../images/ravenclaw.jpeg" },
     { name: "slytherin", image: "../images/slytherin.jpeg" }
 ]
 
