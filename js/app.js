@@ -38,7 +38,6 @@ const randomize = () => {
 const cardGenerator = () => {
     const cardData = randomize();
 cardData.forEach( item => {
-        console.log(item);
     const card = document.createElement("div");
     const face = document.createElement("img");
     const back = document.createElement("img");
@@ -52,4 +51,4 @@ face.src = item.image;
     card.appendChild(back);
     });   
 };
-cardGenerator()
+cardGenerator();
