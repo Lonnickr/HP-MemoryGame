@@ -19,7 +19,7 @@ section {
    grid-template-rows: repeat(3,10rem);
    grid-template-columns: repeat(4,8rem);
    gap: 6px;
-  height: 95vh;
+  height: 96vh;
   perspective: 800px;
 }
 
@@ -32,12 +32,16 @@ section {
     position: relative;
     transform-style: preserve-3d;
     transition: all 2s ease;
-    transform: rotateY(180deg);
+    box-shadow: rgba(0,0,0,0.2) 0px 5px 15px
 }
 
 .back {
     background-image: url("../images/backofcard.jpeg");
     backface-visibility: hidden;
+}
+
+.toggleCard {
+    transform: rotateY(180deg);
 }
 
 
