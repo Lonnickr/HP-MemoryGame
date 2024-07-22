@@ -37,6 +37,7 @@ const randomize = () => {
 
 const cardGenerator = () => {
     const cardData = randomize();
+    const cards = document.querySelectorAll(".card")
 cardData.forEach( item => {
     const card = document.createElement("div");
     const face = document.createElement("img");
@@ -45,13 +46,17 @@ cardData.forEach( item => {
     face.classList = "face";
     back.classList = "back";
 face.src = item.image;
-
+card.setAttribute("name", item.name)
     section.appendChild(card);
     card.appendChild(face);
     card.appendChild(back);
     card.addEventListener('click', (e) => {
-        card.classList.toggle("toggleCard")
+        card.classList.toggle("toggleCard");
+        checkCards(e);
     })
-    });   
+  });   
 };
+const checkCards = (e) => {
+    const clickedCard = e.target;
+}
 cardGenerator();
