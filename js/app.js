@@ -61,6 +61,8 @@ card.setAttribute("name", item.name)
     })
   });   
 };
+
+
 const checkCards = (e) => {
     const clickedCard = e.target;
     clickedCard.classList.add("flipped");
@@ -82,8 +84,15 @@ const checkCards = (e) => {
     };
 }
 };
- 
-    
+
+startButton.addEventListener("click", () => {
+    movesCount = 0
+    time = 0
+    controls.classList.add("hide");
+    stopButton.classList.remove("hide");
+    startButton.classList.add("hide")
+})  
         
 cardGenerator();
 
+ 

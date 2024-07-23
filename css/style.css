@@ -67,19 +67,28 @@ button {
     border-radius: 0.3rem;
     padding: 1em 1.5rem;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
 }
 
 #stop {
     font-size: 1.1rem;
-    display: flex;
     margin: 1.1rem auto 0 auti;
     background-color: transparent;
     font-family:'parryhotter';
 }
 
+.controls-container button {
+    font-size: 1.3rem;
+    box-shadow: 0 0.6rem, 2rem, rgba(86, 66, 0, 0.2);
+}
+
+.hide{
+    display: flex;
+}
+
 #start {
-    font-size: 1.1rem;
-    display: flex;  
+    font-size: 1.1rem; 
     margin: 1.1rem auto 0 auti;
     background-color: transparent;
     font-family: 'parryhotter';
@@ -87,7 +96,6 @@ button {
 
 #timer {
     font-size: 1.1rem;
-    display: flex;  
     margin: 1.1rem auto 0 auti;
     background-color: transparent;
     font-family: 'parryhotter';
