@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'parryhotter';
+    src: url(../Font/parry-hotter-font/ParryHotter-LOZ.ttf) format('truetype')
+}
+
+
 * {
     margin: 0px;
     padding: 0px;
@@ -16,7 +22,7 @@ body {
 
 section {
    display: grid;
-   grid-template-rows: repeat(3,10rem);
+   grid-template-rows: repeat(4,10rem);
    grid-template-columns: repeat(4,8rem);
    gap: 6px;
    height: 96vh;
@@ -37,7 +43,7 @@ section {
 }
 
 .back {
-    background-image: url("../images/backofcard.jpeg");
+    background-image: url("../images/fawkes\ 1.jpeg");
     backface-visibility: hidden;
    background-position: center center;
   background-size: cover;
@@ -48,5 +54,42 @@ section {
     transform: rotateY(180deg);
 }
 
+.controls-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
+button {
+    border: none;
+    border-radius: 0.3rem;
+    padding: 1em 1.5rem;
+    cursor: pointer;
+}
+
+#stop {
+    font-size: 1.1rem;
+    display: flex;
+    margin: 1.1rem auto 0 auti;
+    background-color: transparent;
+    font-family:'parryhotter';
+}
+
+#start {
+    font-size: 1.1rem;
+    display: flex;  
+    margin: 1.1rem auto 0 auti;
+    background-color: transparent;
+    font-family: 'parryhotter';
+}
+
+#timer {
+    font-size: 1.1rem;
+    display: flex;  
+    margin: 1.1rem auto 0 auti;
+    background-color: transparent;
+    font-family: 'parryhotter';
+}
 

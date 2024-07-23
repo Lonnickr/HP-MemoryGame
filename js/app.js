@@ -15,18 +15,22 @@ let firstCard = false;
 let seconDcard = false;
 
 const getData = () => [
-    { name: "fawkes1", image: "../images/fawkes\ 1.jpeg"},
+    { name: "dumbledore", image: "../images/Dumbledore.jpeg"},
+    { name: "hp&v", image: "../images/backofcard2.jpeg"},
+    { name: "book", image: "../images/backofcard.jpeg"},
     { name: "fawkes2", image: "../images/fawkes\ 2.jpeg" },
     { name: "gryffindor", image: "../images/gryffindor.jpeg" },
     { name: "hufflepuff", image: "../images/hufflepuff.jpeg" },
     { name: "ravenclaw", image: "../images/ravenclaw.jpeg" },
     { name: "slytherin", image: "../images/slytherin.jpeg" },
-    { name: "fawkes1", image: "../images/fawkes\ 1.jpeg"},
+    { name: "book", image: "../images/backofcard.jpeg"},
     { name: "fawkes2", image: "../images/fawkes\ 2.jpeg" },
     { name: "gryffindor", image: "../images/gryffindor.jpeg" },
     { name: "hufflepuff", image: "../images/hufflepuff.jpeg" },
     { name: "ravenclaw", image: "../images/ravenclaw.jpeg" },
-    { name: "slytherin", image: "../images/slytherin.jpeg" }
+    { name: "slytherin", image: "../images/slytherin.jpeg" },
+    { name: "hp&v", image: "../images/backofcard2.jpeg"},
+    { name: "dumbledore", image: "../images/Dumbledore.jpeg"}
 ]
 
 const randomize = () => {
@@ -65,8 +69,16 @@ const checkCards = (e) => {
         if (flippedCards[0].getAttribute("name") === flippedCards[1].getAttribute("name")
         ) {
             console.log("match");
+            flippedCards.forEach((card) => {
+                card.classList.remove("flipped");
+                card.style.pointerEvents = "none";
+            })
     } else {
        console.log("wrong");
+       flippedCards.forEach(card => {
+        card.classList.remove("flipped");
+        setTimeout(() => card.classList.remove("toggleCard"), 1000)
+       })
     };
 }
 };
