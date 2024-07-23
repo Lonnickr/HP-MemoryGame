@@ -40,7 +40,7 @@ section {
     background-image: url("../images/backofcard.jpeg");
     backface-visibility: hidden;
     display: flex;
-    justify-content: center;
+    justify-items: center;
 }
 
 .toggleCard {

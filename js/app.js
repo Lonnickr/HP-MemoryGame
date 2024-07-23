@@ -45,6 +45,7 @@ cardData.forEach( item => {
     card.classList = "card";
     face.classList = "face";
     back.classList = "back";
+
 face.src = item.image;
 card.setAttribute("name", item.name)
     section.appendChild(card);
@@ -58,5 +59,12 @@ card.setAttribute("name", item.name)
 };
 const checkCards = (e) => {
     const clickedCard = e.target;
-}
+    const flippedCards = document.querySelectorAll(".flipped");
+    clickedCard.classList.add("flipped");
+    if(flippedCards.length === 2) {
+        if(flippedCards[0].getAttribute("name") === 
+           flippedCards[1].getAttribute ("name")
+    } )
+};
 cardGenerator();
+
