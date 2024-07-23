@@ -39,8 +39,9 @@ section {
 .back {
     background-image: url("../images/backofcard.jpeg");
     backface-visibility: hidden;
-    display: flex;
-    justify-items: center;
+   background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .toggleCard {
