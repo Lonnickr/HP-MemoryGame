@@ -59,12 +59,19 @@ card.setAttribute("name", item.name)
 };
 const checkCards = (e) => {
     const clickedCard = e.target;
-    const flippedCards = document.querySelectorAll(".flipped");
     clickedCard.classList.add("flipped");
-    if(flippedCards.length === 2) {
-        if(flippedCards[0].getAttribute("name") === 
-           flippedCards[1].getAttribute ("name")
-    } )
+    const flippedCards = document.querySelectorAll('.flipped'); 
+    if (flippedCards.length === 2) {
+        if (flippedCards[0].getAttribute("name") === flippedCards[1].getAttribute("name")
+        ) {
+            console.log("match");
+    } else {
+       console.log("wrong");
+    };
+}
 };
+ 
+    
+        
 cardGenerator();
 
