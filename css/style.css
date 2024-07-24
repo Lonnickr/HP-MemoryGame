@@ -11,7 +11,7 @@
 }
 
 body {
-    background-image: url("../images/background\ 1.jpeg");
+    /* background-image: url("../images/background\ 1.jpeg"); */
     display: flex;   
     justify-items: center;
     align-items: center;
@@ -26,13 +26,16 @@ section {
    grid-template-columns: repeat(4,8rem);
    gap: 6px;
    height: 96vh;
-   perspective: 800px;
+   /* perspective: 800px; */
 }
 
 .stats-container {
     text-align: center;
     margin-top: 1.3rem;
     font-family:'parryhotter';
+}
+#timer {
+    font-size: 1.5rem;
 }
 
 .face, .back {
@@ -79,7 +82,7 @@ button {
     cursor: pointer;
 }
 
-#stop {
+#restart {
     margin-left: 100px;
     margin-right: 100px;
     font-size: 1.1rem;
