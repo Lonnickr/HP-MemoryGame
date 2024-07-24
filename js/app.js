@@ -3,7 +3,7 @@ console.log("Harry Potter memory card game!")
 const section = document.querySelector("section");
 const attempts = document.querySelector("attempt");
 const matches = document.querySelector("match")
-const timevalue = document.querySelector("time");
+const timer = document.querySelector("#timer");
 const stopButton = document.getElementById("stop");
 const startButton = document.getElementById("start");
 const gameContainer = document.querySelector("game-container");
@@ -14,6 +14,22 @@ let cards;
 let interval;
 let firstCard = false;
 let seconDcard = false;
+// let timer = null;
+let timeLeft;
+function startTimer() {
+    let timer;
+    let timeRemaining = 60;
+clearInterval(timer);
+ timer = setInterval(function() {
+      timeRemaining--;
+document.getElementById('timer').innerText = `Time Remaining: ${timeRemaining} seconds`;
+    if (timeRemaining <= 0) {
+            clearInterval(timer);
+            alert("Time's up!");
+        }
+    }, 1000);
+}
+
 
 const getData = () => [
     { name: "dumbledore", image: "../images/Dumbledore.jpeg"},
@@ -33,6 +49,10 @@ const getData = () => [
     { name: "hp&v", image: "../images/backofcard2.jpeg"},
     { name: "dumbledore", image: "../images/Dumbledore.jpeg"}
 ]
+
+
+
+
 
 const randomize = () => {
     const cardData = getData ();
@@ -88,16 +108,11 @@ const checkCards = (e) => {
 cardGenerator();
 
 startButton.addEventListener("click", () => {
-    attempts = 0
-    matches = 0
-    controls.classList.add("hide");
-    stopButton.classList.remove("hide");
-    startButton.classList.add("hide");
+    startTimer()
 });
 
-stopButton.addEventListener(
-        "click"
-        (stopGame = () => {
+
+stopButton.addEventListener( "click", (stopGame = () => {
             controls.classList.romove("hide");
             stopButton.classList.add("hide");
             startButton.classList.remove("hide");
@@ -113,20 +128,6 @@ stopButton.addEventListener(
             };
         })
     )  
-
-    let timer;
-    let timeRemaining = 60;
-    function startTimer() {
-   clearInterval(timer);
-     timer = setInterval(function() {
-          timeRemaining--;
-    document.getElementById('timer').innerText = `Time Remaining: ${timeRemaining} seconds`;
-        if (timeRemaining <= 0) {
-                clearInterval(timer);
-                alert("Time's up!");
-            }
-        }, 1000);
-    }
 
 
        
