@@ -60,13 +60,11 @@ section {
 }
 
 .controls-container {
-    position: absolute;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-evenly;
+    flex-direction: row;
 }
-
 
 #controls-container button {
     font-size: 1.3rem;
@@ -81,28 +79,33 @@ button {
 }
 
 #stop {
-    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
     font-size: 1.1rem;
-    margin: 1.1rem auto 0 auti;
     background-color: transparent;
     font-family:'parryhotter';
 }
 
-#start {
+#timer {
+    margin-left: 20px;
+    margin-right: 20px;
     display: flex;
+    font-size: 1.1rem;
+    margin: 1.1rem auto 0 auti;
+    background-color: transparent;
+    font-family: 'parryhotter';
+}
+
+#start {
+    margin-left: 20px;
+    margin-right: 20px;
     font-size: 1.1rem; 
     margin: 1.1rem auto 0 auti;
     background-color: transparent;
     font-family: 'parryhotter';
 }
 
-#timer {
-    display: flex;
-    font-size: 1.1rem;
-    margin: 1.1rem auto 0 auti;
-    background-color: transparent;
-    font-family: 'parryhotter';
-}
+
 
 
 
