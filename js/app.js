@@ -84,6 +84,7 @@ const checkCards = (e) => {
     };
 }
 };
+cardGenerator();
 
 startButton.addEventListener("click", () => {
     movesCount = 0
@@ -91,8 +92,27 @@ startButton.addEventListener("click", () => {
     controls.classList.add("hide");
     stopButton.classList.remove("hide");
     startButton.classList.add("hide")
-})  
-        
-cardGenerator();
+    interval = setInterval(timeGenerator, 1000);
+    initializer ();
+});  
+stopButton.addEventListener(
+    "click"
+    (stopGame = () => {
+        controls.classList.romove("hide");
+        stopButton.classList.add("hide");
+        startButton.classList.remove("hide");
+        clearInterval(interval)
+    })
+)
+
+const initializer = () => {
+    result.innerText = "";
+    winCount = 0;
+    let cardValues = generateRandom();
+    console.log(cardValues);
+    cardGenerator(cardValues);
+};
+initializer();        
+
 
  
