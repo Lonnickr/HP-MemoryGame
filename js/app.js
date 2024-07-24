@@ -32,26 +32,23 @@ document.getElementById('timer').innerText = `Time Remaining: ${timeRemaining} s
 
 
 const getData = () => [
-    { name: "dumbledore", image: "../images/Dumbledore.jpeg"},
-    { name: "hp&v", image: "../images/backofcard2.jpeg"},
-    { name: "book", image: "../images/backofcard.jpeg"},
+    { name: "dumbledore", image: "../images/Dumbledore.jpeg" },
+    { name: "hp&v", image: "../images/backofcard2.jpeg" },
+    { name: "book", image: "../images/backofcard.jpeg" },
     { name: "fawkes2", image: "../images/fawkes\ 2.jpeg" },
     { name: "gryffindor", image: "../images/gryffindor.jpeg" },
     { name: "hufflepuff", image: "../images/hufflepuff.jpeg" },
     { name: "ravenclaw", image: "../images/ravenclaw.jpeg" },
     { name: "slytherin", image: "../images/slytherin.jpeg" },
-    { name: "book", image: "../images/backofcard.jpeg"},
+    { name: "book", image: "../images/backofcard.jpeg" },
     { name: "fawkes2", image: "../images/fawkes\ 2.jpeg" },
     { name: "gryffindor", image: "../images/gryffindor.jpeg" },
     { name: "hufflepuff", image: "../images/hufflepuff.jpeg" },
     { name: "ravenclaw", image: "../images/ravenclaw.jpeg" },
     { name: "slytherin", image: "../images/slytherin.jpeg" },
-    { name: "hp&v", image: "../images/backofcard2.jpeg"},
-    { name: "dumbledore", image: "../images/Dumbledore.jpeg"}
+    { name: "hp&v", image: "../images/backofcard2.jpeg" },
+    { name: "dumbledore", image: "../images/Dumbledore.jpeg" }
 ]
-
-
-
 
 
 const randomize = () => {
@@ -108,6 +105,9 @@ const checkCards = (e) => {
 cardGenerator();
 
 startButton.addEventListener("click", () => {
+    controls.classList.romove("hide");
+    stopButton.classList.add("hide");
+    startButton.classList.remove("hide");
     startTimer()
 });
 
