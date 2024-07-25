@@ -44,7 +44,7 @@ In this memory card game, you will be presented with a set of cards placed face 
 
 	•	Click the “Restart” button to reset the board and play again.
 
-## [Play Now!](https://github.com/yourusername/harry-potter-memory-game.git)
+## [Play Now!](https://lonnickr.github.io/HP-MemoryGame/)
 
 ### [Planning Materials](https://docs.google.com/document/d/1HnVUiSLnpWDbc8PDxR496tz9NvLvgcAIwIR096qPjsI/edit)
 
@@ -56,12 +56,6 @@ In this memory card game, you will be presented with a set of cards placed face 
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Google Drive](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)
 
-> ## Usage:
-
-•	Click the “Start” button to begin the game.
-
-•	Click on cards to reveal them and find matching pairs.
-
-•	Track your attempts and matches on the game board.
-
-•	Click the “Restart” button to reset the game and play again.
+> ## Attributions:
+1. Images - ![Adobe](https://www.adobe.com/home)
+2. Sounds - 
