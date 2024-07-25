@@ -11,6 +11,7 @@ const result = document.getElementById("result");
 const controls = document.querySelector("controls-container");
 
 let cards;
+let gameStarted = false;
 let interval;
 let matchCounter = 0
 let attemptCounter = 0
@@ -76,11 +77,22 @@ card.setAttribute("name", item.name)
     section.appendChild(card);
     card.appendChild(face);
     card.appendChild(back);
-    card.addEventListener('click', (e) => {
-        card.classList.toggle("toggleCard");
-        checkCards(e);
-    })
-  });   
+    
+        card.addEventListener('click', (e) => {
+            if(gameStarted) {
+            card.classList.toggle("toggleCard");
+            checkCards(e);}
+        })
+        const restartGame = () => {
+            clearInterval(interval);
+            attempts = 0;
+            matches = 0;
+            attemptsDisplay.innerText = `Attempts: ${attempts}`;
+            matchesDisplay.innerText = `Matches: ${matches}`;
+            timer.innerText = `Time Remaining: 60 seconds`;
+            result.innerText = "";
+        }
+    });   
 };
 
 
@@ -113,11 +125,13 @@ cardGenerator();
 
 startButton.addEventListener("click", () => {
     startTimer()
+    gameStarted = true
 });
 
 
 restartButton.addEventListener( "click", (stopGame = () => {
             restartGame();
+            gameRestarted();
 
     const initializer = () => {
                 result.innerText = "";
