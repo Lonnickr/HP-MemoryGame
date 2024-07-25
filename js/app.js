@@ -1,8 +1,8 @@
 console.log("Harry Potter memory card game!")
 
 const section = document.querySelector("section");
-const attempts = document.querySelector("attempt");
-const matches = document.querySelector("match")
+const attemptsEl = document.querySelector("#attempts");
+const matchesEl = document.querySelector("#matches")
 const timer = document.querySelector("#timer");
 const restartButton = document.getElementById("restart");
 const startButton = document.getElementById("start");
@@ -12,6 +12,8 @@ const controls = document.querySelector("controls-container");
 
 let cards;
 let interval;
+let matchCounter = 0
+let attemptCounter = 0
 let firstCard = false;
 let seconDcard = false;
 let time = null
@@ -89,13 +91,17 @@ const checkCards = (e) => {
     if (flippedCards.length === 2) {
         if (flippedCards[0].getAttribute("name") === flippedCards[1].getAttribute("name")
         ) {
-            console.log("match");
+            // console.log("match");
+            matchCounter ++
+            matchesEl.textContent = `Matches ${matchCounter}`
             flippedCards.forEach((card) => {
                 card.classList.remove("flipped");
                 card.style.pointerEvents = "none";
             })
     } else {
        console.log("wrong");
+       attemptCounter ++
+       attemptsEl.textContent = `Attempts ${attemptCounter}`
        flippedCards.forEach(card => {
         card.classList.remove("flipped");
         setTimeout(() => card.classList.remove("toggleCard"), 1000)
@@ -106,19 +112,12 @@ const checkCards = (e) => {
 cardGenerator();
 
 startButton.addEventListener("click", () => {
-    // controls.classList.romove("hide");
-    // stopButton.classList.add("hide");
-    // startButton.classList.remove("hide");
     startTimer()
 });
 
 
 restartButton.addEventListener( "click", (stopGame = () => {
-            // controls.classList.romove("hide");
-            // stopButton.classList.add("hide");
-            // startButton.classList.remove("hide");
             restartGame();
-            // clearInterval(interval)
 
     const initializer = () => {
                 result.innerText = "";
