@@ -4,7 +4,7 @@ const section = document.querySelector("section");
 const attempts = document.querySelector("attempt");
 const matches = document.querySelector("match")
 const timer = document.querySelector("#timer");
-const stopButton = document.getElementById("stop");
+const restartButton = document.getElementById("restart");
 const startButton = document.getElementById("start");
 const gameContainer = document.querySelector("game-container");
 const result = document.getElementById("result");
@@ -14,7 +14,7 @@ let cards;
 let interval;
 let firstCard = false;
 let seconDcard = false;
-// let timer = null;
+let time = null
 let timeLeft;
 function startTimer() {
     let timer;
@@ -29,6 +29,7 @@ document.getElementById('timer').innerText = `Time Remaining: ${timeRemaining} s
         }
     }, 1000);
 }
+
 
 
 const getData = () => [
@@ -105,18 +106,19 @@ const checkCards = (e) => {
 cardGenerator();
 
 startButton.addEventListener("click", () => {
-    controls.classList.romove("hide");
-    stopButton.classList.add("hide");
-    startButton.classList.remove("hide");
+    // controls.classList.romove("hide");
+    // stopButton.classList.add("hide");
+    // startButton.classList.remove("hide");
     startTimer()
 });
 
 
-stopButton.addEventListener( "click", (stopGame = () => {
-            controls.classList.romove("hide");
-            stopButton.classList.add("hide");
-            startButton.classList.remove("hide");
-            clearInterval(interval)
+restartButton.addEventListener( "click", (stopGame = () => {
+            // controls.classList.romove("hide");
+            // stopButton.classList.add("hide");
+            // startButton.classList.remove("hide");
+            restartGame();
+            // clearInterval(interval)
 
     const initializer = () => {
                 result.innerText = "";
