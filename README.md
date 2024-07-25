@@ -58,4 +58,5 @@ In this memory card game, you will be presented with a set of cards placed face 
 
 > ## Attributions:
 1. Images - ![Adobe](https://www.adobe.com/home)
-2. Sounds - 
+2. Sounds - https://freesound.org/
+3. Ben confetti github - ![confetti](https://github.com/SEI-Remote/confetti/blob/main/confetti.js)
