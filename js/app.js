@@ -102,7 +102,7 @@ const checkCards = (e) => {
                 clearInterval(interval);
                 result.innerText = "You Win!";
                 gameStarted = false;
-                confetti.start(1000)
+                confetti.start(2000)
             }
         } else {
             attemptCounter++;

@@ -57,6 +57,6 @@ In this memory card game, you will be presented with a set of cards placed face 
 ![Google Drive](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)
 
 > ## Attributions:
-1. Images - ![Adobe](https://www.adobe.com/home)
-2. Sounds - https://freesound.org/
-3. Ben confetti github - ![confetti](https://github.com/SEI-Remote/confetti/blob/main/confetti.js)
+1. Images - Adobe https://www.adobe.com/home
+2. Sounds - Free sound https://freesound.org/
+3. Ben confetti github - confetti https://github.com/SEI-Remote/confetti/blob/main/confetti.js
