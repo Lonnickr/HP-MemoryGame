@@ -33,7 +33,7 @@ section {
     text-align: center;
     margin-top: 1.3rem;
     font-family:'parryhotter';
-    /* font-weight: bold; */
+    font-weight: normal;
     display: flex;
     flex-direction: column;
 }
