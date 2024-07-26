@@ -11,7 +11,7 @@ const result = document.getElementById("result");
 const controls = document.querySelector("controls-container");
 const winnerSound = new Audio("../sounds/win1.wav")
 const flipCardSound = new Audio("../sounds/turnpage.wav")
-const loserSound = new Audio("../sounds/loser.mps")
+const loserSound = new Audio("../sounds/loser.mp3")
 
 
 
@@ -24,6 +24,10 @@ let firstCard = false;
 let secondCard = false;
 let time = null;
 let timeLeft;
+
+function confettiDelay() {
+    confetti.start(1000)
+}
 
 const getData = () => [
     { name: "dumbledore", image: "./images/Dumbledore.jpeg" },
@@ -77,7 +81,7 @@ const cardGenerator = () => {
 };
 
 const startTimer = () => {
-    timeLeft = 60;
+    timeLeft = 50;
     timer.innerText = `Time Remaining: ${timeLeft} seconds`;
     clearInterval(interval);
     interval = setInterval(() => {
@@ -86,6 +90,7 @@ const startTimer = () => {
         if (timeLeft <= 0) {
             clearInterval(interval);
             result.innerText = "You Lose!";
+            loserSound.play()
             gameStarted = false;
         }
     }, 1000);
@@ -97,18 +102,19 @@ const checkCards = (e) => {
     const flippedCards = document.querySelectorAll('.flipped'); 
     if (flippedCards.length === 2) {
         if (flippedCards[0].getAttribute("name") === flippedCards[1].getAttribute("name")) {
+            flipCardSound.play()
             matchCounter++;
             matchesEl.textContent = `Matches: ${matchCounter}`;
             flippedCards.forEach((card) => {
                 card.classList.remove("flipped");
                 card.style.pointerEvents = "none";
-            });
+                });
             if (matchCounter === getData().length / 2) {
                 clearInterval(interval);
                 result.innerText = "You Win!";
                 gameStarted = false;
                 winnerSound.play()
-                confetti.start(2000)
+                setTimeout(confettiDelay, 2000)
             }
         } else {
             attemptCounter++;

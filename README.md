@@ -58,6 +58,8 @@ In this memory card game, you will be presented with a set of cards placed face 
 
 > ## Attributions:
 1. Images - Adobe https://www.adobe.com/home
-2. Sounds - Free sound https://freesound.org/
+2. Sounds - Free sound https://freesound.org/people/Pablobd/sounds/519998/
+https://freesound.org/people/joe93barlow/sounds/105986/
+https://freesound.org/people/MiSchy/sounds/369960/
 3. Ben confetti github - confetti https://github.com/SEI-Remote/confetti/blob/main/confetti.js
 4. Confetti colors - Adobe https://color.adobe.com/-Harry-Potter-color-theme-10171239/#:~:text=Harry%20potter%20color%20theme%20%7C%20Adobe%20Color&text=This%20color%20theme%20consists%20of,Station%2C%20Cornflower%20and%20Irish%20Green.
