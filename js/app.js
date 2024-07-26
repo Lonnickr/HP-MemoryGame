@@ -26,7 +26,7 @@ let time = null;
 let timeLeft;
 
 function confettiDelay() {
-    confetti.start(1000)
+    confetti.start(3000)
 }
 
 const getData = () => [
