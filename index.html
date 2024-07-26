@@ -18,8 +18,24 @@
    <div class="game-container"></div>
       <h1 class="controls-container">
          <button id="start" class="hide">Start Game</button>
+         <button id="instructionsBtn">instructions</button>
          <button id="restart" class="hide">Restart Game</button>
-      </h1>
+         </h1>
+    <div id="instructionsModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Game Instructions</h2>
+        <p>1. Click the “Start” button to begin the game and start the timer.</p>
+        <p>2. Click on the first card to flip it face up. Click on the second card to find your match.</p>
+        <p>3. If the two cards match, they remain face up, and a match is counted. If the two cards do not match, 
+          they will be flipped back face down.</p>
+        <p>4. Repeat steps 3 and 4 until all matches are found or the timer runs out.</p>
+        <p>5. When the timer stops, the game displays “Game over!” along with the total attempts and matches. Depending on the outcome, 
+          a themed sound is played, and the game shows if you are a winner or a loser.</p>
+        <p>6. Click the “Restart” button to reset the board and play again.</p> 
+      </div>
+    </div>
+
     <p id="result"></p>
     <section></section>
   </body>

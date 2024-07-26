@@ -83,16 +83,16 @@ card.setAttribute("name", item.name)
             card.classList.toggle("toggleCard");
             checkCards(e);}
         })
-        const restartGame = () => {
-            clearInterval(interval);
-            attempts = 0;
-            matches = 0;
-            attemptsDisplay.innerText = `Attempts: ${attempts}`;
-            matchesDisplay.innerText = `Matches: ${matches}`;
-            timer.innerText = `Time Remaining: 60 seconds`;
-            result.innerText = "";
-        }
-    });   
+function restartGame () {
+        clearInterval(interval);
+        attempts = 0;
+        matches = 0;
+        attemptsDisplay.innerText = `Attempts: ${attempts}`;
+        matchesDisplay.innerText = `Matches: ${matches}`;
+        timer.innerText = `Time Remaining: 60 seconds`;
+        result.innerText = "";
+    }
+});   
 };
 
 
@@ -111,7 +111,7 @@ const checkCards = (e) => {
                 card.style.pointerEvents = "none";
             })
     } else {
-       console.log("wrong");
+    //    console.log("wrong");
        attemptCounter ++
        attemptsEl.textContent = `Attempts ${attemptCounter}`
        flippedCards.forEach(card => {
@@ -145,7 +145,23 @@ restartButton.addEventListener( "click", (stopGame = () => {
     )  
 
 
-       
+    var modal = document.getElementById("instructionsModal");
+    var btn = document.getElementById("instructionsBtn");
+    var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+} 
 
 
  
