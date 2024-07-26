@@ -9,6 +9,11 @@ const startButton = document.getElementById("start");
 const gameContainer = document.querySelector("game-container");
 const result = document.getElementById("result");
 const controls = document.querySelector("controls-container");
+const winnerSound = new Audio("../sounds/win1.wav")
+const flipCardSound = new Audio("../sounds/turnpage.wav")
+const loserSound = new Audio("../sounds/loser.mps")
+
+
 
 let cards;
 let gameStarted = false;
@@ -102,6 +107,7 @@ const checkCards = (e) => {
                 clearInterval(interval);
                 result.innerText = "You Win!";
                 gameStarted = false;
+                winnerSound.play()
                 confetti.start(2000)
             }
         } else {
