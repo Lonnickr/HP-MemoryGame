@@ -133,7 +133,7 @@ const resetGame = () => {
     matchCounter = 0;
     attemptsEl.innerText = `Attempts: ${attemptCounter}`;
     matchesEl.innerText = `Matches: ${matchCounter}`;
-    timer.innerText = `Time Remaining: 60 seconds`;
+    timer.innerText = `Time Remaining: 50 seconds`;
     result.innerText = "";
     gameStarted = false;
     section.innerHTML = "";
